@@ -4,6 +4,8 @@ A short TDD exercise focused on Vue
 
 ## Instructions
 
+Clone the repo. Install dependencies with `npm install` or `yarn install`.
+
 Go to `test/unit/specs/LoginPage.spec.js` to see the test file. The source file is in `src/components/LoginPage.vue`. Some of the boilerplate has already been written for you.
 
 Start the test runner with `npm run unit:watch`, which starts Karma/Mocha in a continuous watch mode.
