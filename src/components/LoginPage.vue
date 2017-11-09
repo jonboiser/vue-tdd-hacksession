@@ -10,8 +10,8 @@
         id="username"
         v-model="username"
       />
-      <label for="username">
-        Pasword
+      <label for="password">
+        Password
       </label>
       <input
         type="password"
