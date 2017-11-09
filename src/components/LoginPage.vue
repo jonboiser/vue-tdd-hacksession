@@ -26,11 +26,17 @@
       </button>
     </form>
 
-    <div v-if="loginSucessful">
+    <div
+      v-if="loginSucessful"
+      id="login-successful"
+    >
       Congrats, you're logged in!
     </div>
 
-    <div v-if="loginFailed">
+    <div
+      v-if="loginFailed"
+      id="login-failed"
+    >
       Login failed
     </div>
   </div>
