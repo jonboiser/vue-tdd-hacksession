@@ -8,6 +8,8 @@ Go to `test/unit/specs/LoginPage.spec.js` to see the test file. The source file 
 
 Start the test runner with `npm run unit:watch`, which starts Karma/Mocha in a continuous watch mode.
 
+You can start the app with `npm run dev` and open it in your web browser.
+
 All the tests will fail because I put a silly assertion in there.
 
 Each test has a written description: first implement a failing test that tests for the described functionality; next, implement the feature to get it to green. Use vue-test-utils, sinon, and chai to write your assertions.
