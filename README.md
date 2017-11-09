@@ -14,6 +14,33 @@ Each test has a written description: first implement a failing test that tests f
 
 If you have to, you can break the Red-Green-Refactor recycle to get a feeling for the test utilities. But once you get a hang of things, start over and do TDD in the intended way.
 
+## Tips
+
+* To preview the rendered html, you can `console.log(wrapper.html())`
+* To preview the view model object, you can `console.log(wrapper.vm)`, but try not to write any assertions on this object!
+
+## Stubbing
+
+You can "stub" an object's method to take control of its behavior and also inspect its calls.
+
+To stub:
+
+```javascript
+import sinon from 'sinon';
+
+const foo = {
+  bar() { return 'baz' }
+}
+
+const fooStub = sinon.stub(foo, 'bar');
+fooStub.returns('blah');
+
+console.log(foo.bar(100)); // 'blah'
+sinon.assert.called(fooStub); // OK
+sinon.assert.calledWith(fooStub, 100); // OK
+sinon.assert.calledTwice(fooStub); // ERROR
+```
+
 ## Links
 
 * [vue-test-utils doc](https://vue-test-utils.vuejs.org/en/)
